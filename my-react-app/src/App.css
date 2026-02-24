@@ -1,0 +1,180 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.borderd{
+  border: 2px solid rgb(255, 55, 55);
+  padding: 10px;
+  margin: 5px 0;
+}
+.text-left{
+  text-align: left;
+}
+
+.container {
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      color: #0f172a;
+      font-size: clamp(1.5rem, 6vw, 2.5rem);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;           /* default: extra small (<576px) → 1 column */
+      gap: clamp(1rem, 3vw, 1.8rem);
+    }
+
+    .student-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border: 1px solid #e2e8f0;
+    }
+
+    .student-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+      padding: 1.4rem;
+      color: white;
+      font-size: clamp(1.3rem, 4vw, 1.7rem);
+      font-weight: 700;
+      text-align: center;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .card-body {
+      padding: clamp(1rem, 3vw, 1.5rem);
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #f1f5f9;
+      gap: 1rem;
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    .info-label {
+      color: #64748b;
+      font-weight: 500;
+      font-size: clamp(0.9rem, 2.5vw, 1rem);
+      flex-shrink: 0;
+    }
+
+    .info-value {
+      color: #0f172a;
+      font-weight: 600;
+      font-size: clamp(0.95rem, 2.8vw, 1.05rem);
+      text-align: right;
+      flex-grow: 1;
+    }
+
+    .age-row .info-value {
+      color: #4f46e5;
+      font-weight: 700;
+      font-size: clamp(1.05rem, 3vw, 1.2rem);
+    }
+
+    /* ────────────────────────────────────────────────
+       Breakpoints (mobile-first)
+    ──────────────────────────────────────────────── */
+
+    /* sm: small devices (≥576px) → 2 columns */
+    @media (min-width: 576px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* md: medium/tablet (≥768px) → 2-3 columns */
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      }
+      .card-header {
+        padding: 1.6rem;
+      }
+    }
+
+    /* lg: large/laptop (≥992px) → 3-4 columns */
+    @media (min-width: 992px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* xl: extra large/desktop (≥1200px) → 4+ columns */
+    @media (min-width: 1200px) {
+      .grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .container {
+        padding: 0 2rem;
+      }
+    }
+
+    /* Extra adjustments for very small screens (xs) */
+    @media (max-width: 575px) {
+      .info-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+      }
+      .info-value {
+        text-align: left;
+      }
+    }
